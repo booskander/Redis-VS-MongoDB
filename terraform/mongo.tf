@@ -13,7 +13,7 @@ resource "docker_volume" "mongo_volume" {
 resource "docker_container" "mongo_container" {
   image = docker_image.mongo_image.name
   count = var.mongo_replicas_count
-  name  = "local-mongo-${count.index + 1}" # setting unique names
+  name  = "mongo-node-${count.index + 1}" # setting unique names
   networks_advanced {
     name = docker_network.mongo_network.name
   }
