@@ -67,3 +67,4 @@ docker exec redis-node-1 redis-cli -a password INFO replication
 # For reference:
 
 https://www.mongodb.com/resources/products/compatibilities/deploying-a-mongodb-cluster-with-docker
+https://github.com/stutzlab/ycsb-stresser
