@@ -1,4 +1,4 @@
-# 1. Navigate to terraform directory (you can also modify the docker compose if u want)
+# 1. Navigate to terraform directory 
 
 run:
 
