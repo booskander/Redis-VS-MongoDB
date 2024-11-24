@@ -7,6 +7,8 @@ if [ -z "$1" ]; then
 fi
 
 REPLICA_COUNT=$1
+DB_NAME="myDatabase"  # Specify the name of the database to create
+COLLECTION_NAME="myCollection"  # Specify the name of the collection to create
 
 # Wait until the MongoDB container is ready
 for i in {1..10}; do
@@ -43,3 +45,23 @@ if [ "$INITIATED" -ne 1 ]; then
 else
   echo "Replica set is already initialized."
 fi
+
+# Wait until the replica set is ready
+for i in {1..10}; do
+  if docker exec mongo-node-1 mongosh --eval 'rs.isMaster().ismaster' >/dev/null 2>&1; then
+    echo "Replica set is ready for database operations."
+    break
+  fi
+  echo "Waiting for replica set to be ready..."
+  sleep 5
+done
+
+# Create the database and collection
+echo "Creating database '$DB_NAME' and collection '$COLLECTION_NAME'..."
+
+docker exec mongo-node-1 mongosh --eval "
+  use ${DB_NAME};
+  db.createCollection('${COLLECTION_NAME}');
+  print('Database and Collection created successfully.');
+"
+echo "Database and collection created."

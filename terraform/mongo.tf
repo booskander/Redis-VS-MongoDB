@@ -1,37 +1,3 @@
-# resource "null_resource" "mongo_replicaset_init" {
-#   depends_on = [docker_container.mongo_container]
-
-#   provisioner "local-exec" {
-#     command = <<EOT
-#       for i in {1..10}; do
-#         docker exec mongo-node-1 mongo --eval 'rs.initiate()' && break || sleep 5;
-#       done
-#           docker exec mongo-node-1 mongosh --eval "rs.initiate({
-#         _id: \"myReplicaSet\",
-#         members: [
-#           ${join(",", [for i in range(var.mongo_replicas_count) : "{_id: $i, host: \"mongo-node-${i + 1}\"}"])}
-#         ]
-#       })"
-#     EOT
-#   }
-# }
-
-# resource "null_resource" "mongo_replicaset_custom_init" {
-#   depends_on = [null_resource.mongo_replicaset_init]
-
-#   provisioner "local-exec" {
-#     command = <<EOT
-#       docker exec mongo-node-1 mongosh --eval "rs.initiate({
-#         _id: \"myReplicaSet\",
-#         members: [
-#           ${join(",", [for i in range(var.mongo_replicas_count) : "{_id: $i, host: \"mongo-node-${i + 1}\"}"])}
-#         ]
-#       })"
-#     EOT
-#   }
-# }
-
-
 resource "docker_network" "mongo_network" {
   name = "mongo-network"
   lifecycle {
@@ -51,6 +17,7 @@ resource "docker_container" "mongo_container" {
 
   networks_advanced {
     name = docker_network.mongo_network.name
+
   }
   ports {
     internal = 27017

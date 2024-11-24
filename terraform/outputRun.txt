@@ -1,0 +1,339 @@
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective settings
+[WARNING] Unrecognised tag: 'enabled' (position: START_TAG seen ...</url>\n          <enabled>... @23:20)  @ /Users/skander/.m2/settings.xml, line 23, column 20
+[WARNING] 
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] YCSB Root                                                          [pom]
+[INFO] Core YCSB                                                          [jar]
+[INFO] Per Datastore Binding descriptor                                   [jar]
+[INFO] YCSB Datastore Binding Parent                                      [pom]
+[INFO] MongoDB Binding                                                    [jar]
+[INFO] 
+[INFO] ---------------------------< site.ycsb:root >---------------------------
+[INFO] Building YCSB Root 0.18.0-SNAPSHOT                                 [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ root ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ root ---
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ root ---
+[INFO] 
+[INFO] ---------------------------< site.ycsb:core >---------------------------
+[INFO] Building Core YCSB 0.18.0-SNAPSHOT                                 [2/5]
+[INFO]   from core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ core ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ core ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ core ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ core ---
+[INFO] skip non existing resourceDirectory /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ core ---
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ core ---
+[INFO] Can't extract module name from htrace-core4-4.1.0-incubating.jar: Provider class com.fasterxml.jackson.core.JsonFactory not in JAR file htrace-core4-4.1.0-incubating.jar
+[INFO] 
+[INFO] --------------< site.ycsb:datastore-specific-descriptor >---------------
+[INFO] Building Per Datastore Binding descriptor 0.18.0-SNAPSHOT          [3/5]
+[INFO]   from binding-parent/datastore-specific-descriptor/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ datastore-specific-descriptor ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ datastore-specific-descriptor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ datastore-specific-descriptor ---
+[INFO] skip non existing resourceDirectory /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/binding-parent/datastore-specific-descriptor/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ datastore-specific-descriptor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ datastore-specific-descriptor ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ datastore-specific-descriptor ---
+[INFO] Can't extract module name from htrace-core4-4.1.0-incubating.jar: Provider class com.fasterxml.jackson.core.JsonFactory not in JAR file htrace-core4-4.1.0-incubating.jar
+[INFO] 
+[INFO] ----------------------< site.ycsb:binding-parent >----------------------
+[INFO] Building YCSB Datastore Binding Parent 0.18.0-SNAPSHOT             [4/5]
+[INFO]   from binding-parent/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ binding-parent ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ binding-parent ---
+[INFO] 
+[INFO] --- dependency:2.10:copy-dependencies (stage-dependencies) @ binding-parent ---
+[INFO] 
+[INFO] --- dependency:2.10:list (default-cli) @ binding-parent ---
+[INFO] 
+[INFO] ---------------------< site.ycsb:mongodb-binding >----------------------
+[INFO] Building MongoDB Binding 0.18.0-SNAPSHOT                           [5/5]
+[INFO]   from mongodb/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ mongodb-binding ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ mongodb-binding ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mongodb-binding ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ mongodb-binding ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mongodb-binding ---
+[INFO] skip non existing resourceDirectory /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/mongodb/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ mongodb-binding ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ mongodb-binding ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ mongodb-binding ---
+[INFO] 
+[INFO] --- dependency:2.10:copy-dependencies (stage-dependencies) @ mongodb-binding ---
+[INFO] org.slf4j:slf4j-api:jar:1.7.25 already exists in destination.
+[INFO] ch.qos.logback:logback-core:jar:1.1.2 already exists in destination.
+[INFO] org.xerial.snappy:snappy-java:jar:1.1.7.1 already exists in destination.
+[INFO] org.mongodb:mongo-java-driver:jar:3.11.0 already exists in destination.
+[INFO] ch.qos.logback:logback-classic:jar:1.1.2 already exists in destination.
+[INFO] com.allanbank:mongodb-async-driver:jar:2.0.1 already exists in destination.
+[INFO] 
+[INFO] --- assembly:2.5.5:single (default) @ mongodb-binding ---
+[WARNING] The following patterns were never triggered in this artifact exclusion filter:
+o  '*:sources'
+
+[INFO] Building tar: /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/mongodb/target/ycsb-mongodb-binding-0.18.0-SNAPSHOT.tar.gz
+[INFO] 
+[INFO] --- dependency:2.10:list (default-cli) @ mongodb-binding ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for YCSB Root 0.18.0-SNAPSHOT:
+[INFO] 
+[INFO] YCSB Root .......................................... SUCCESS [  0.583 s]
+[INFO] Core YCSB .......................................... SUCCESS [  0.286 s]
+[INFO] Per Datastore Binding descriptor ................... SUCCESS [  0.063 s]
+[INFO] YCSB Datastore Binding Parent ...................... SUCCESS [  0.149 s]
+[INFO] MongoDB Binding .................................... SUCCESS [  0.477 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.737 s
+[INFO] Finished at: 2024-11-24T14:44:42-05:00
+[INFO] ------------------------------------------------------------------------
+mongo client connection created with mongodb://127.0.0.1:27017/
+[OVERALL], RunTime(ms), 2729
+[OVERALL], Throughput(ops/sec), 0.0
+[TOTAL_GCS_G1_Young_Generation], Count, 1
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.0
+[TOTAL_GCS_G1_Concurrent_GC], Count, 0
+[TOTAL_GC_TIME_G1_Concurrent_GC], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Concurrent_GC], Time(%), 0.0
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[CLEANUP], Operations, 64
+[CLEANUP], AverageLatency(us), 18.046875
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 1148
+[CLEANUP], 95thPercentileLatency(us), 1
+[CLEANUP], 99thPercentileLatency(us), 1148
+[INSERT], Operations, 0
+[INSERT], AverageLatency(us), 0.0
+[INSERT], MinLatency(us), 0
+[INSERT], MaxLatency(us), 0
+[INSERT], 95thPercentileLatency(us), 0
+[INSERT], 99thPercentileLatency(us), 0
+[INSERT], Return=ERROR, 64
+[INSERT-FAILED], Operations, 64
+[INSERT-FAILED], AverageLatency(us), 1415428.0
+[INSERT-FAILED], MinLatency(us), 549376
+[INSERT-FAILED], MaxLatency(us), 2568191
+[INSERT-FAILED], 95thPercentileLatency(us), 2568191
+[INSERT-FAILED], 99thPercentileLatency(us), 2568191
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective settings
+[WARNING] Unrecognised tag: 'enabled' (position: START_TAG seen ...</url>\n          <enabled>... @23:20)  @ /Users/skander/.m2/settings.xml, line 23, column 20
+[WARNING] 
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] YCSB Root                                                          [pom]
+[INFO] Core YCSB                                                          [jar]
+[INFO] Per Datastore Binding descriptor                                   [jar]
+[INFO] YCSB Datastore Binding Parent                                      [pom]
+[INFO] MongoDB Binding                                                    [jar]
+[INFO] 
+[INFO] ---------------------------< site.ycsb:root >---------------------------
+[INFO] Building YCSB Root 0.18.0-SNAPSHOT                                 [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ root ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ root ---
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ root ---
+[INFO] 
+[INFO] ---------------------------< site.ycsb:core >---------------------------
+[INFO] Building Core YCSB 0.18.0-SNAPSHOT                                 [2/5]
+[INFO]   from core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ core ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ core ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ core ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ core ---
+[INFO] skip non existing resourceDirectory /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ core ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ core ---
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ core ---
+[INFO] Can't extract module name from htrace-core4-4.1.0-incubating.jar: Provider class com.fasterxml.jackson.core.JsonFactory not in JAR file htrace-core4-4.1.0-incubating.jar
+[INFO] 
+[INFO] --------------< site.ycsb:datastore-specific-descriptor >---------------
+[INFO] Building Per Datastore Binding descriptor 0.18.0-SNAPSHOT          [3/5]
+[INFO]   from binding-parent/datastore-specific-descriptor/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ datastore-specific-descriptor ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ datastore-specific-descriptor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ datastore-specific-descriptor ---
+[INFO] skip non existing resourceDirectory /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/binding-parent/datastore-specific-descriptor/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ datastore-specific-descriptor ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ datastore-specific-descriptor ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ datastore-specific-descriptor ---
+[INFO] 
+[INFO] --- dependency:3.7.0:list (default-cli) @ datastore-specific-descriptor ---
+[INFO] Can't extract module name from htrace-core4-4.1.0-incubating.jar: Provider class com.fasterxml.jackson.core.JsonFactory not in JAR file htrace-core4-4.1.0-incubating.jar
+[INFO] 
+[INFO] ----------------------< site.ycsb:binding-parent >----------------------
+[INFO] Building YCSB Datastore Binding Parent 0.18.0-SNAPSHOT             [4/5]
+[INFO]   from binding-parent/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ binding-parent ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ binding-parent ---
+[INFO] 
+[INFO] --- dependency:2.10:copy-dependencies (stage-dependencies) @ binding-parent ---
+[INFO] 
+[INFO] --- dependency:2.10:list (default-cli) @ binding-parent ---
+[INFO] 
+[INFO] ---------------------< site.ycsb:mongodb-binding >----------------------
+[INFO] Building MongoDB Binding 0.18.0-SNAPSHOT                           [5/5]
+[INFO]   from mongodb/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.0.0-M1:enforce (enforce-maven) @ mongodb-binding ---
+[INFO] 
+[INFO] --- checkstyle:2.16:check (validate) @ mongodb-binding ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ mongodb-binding ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ mongodb-binding ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ mongodb-binding ---
+[INFO] skip non existing resourceDirectory /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/mongodb/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ mongodb-binding ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ mongodb-binding ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ mongodb-binding ---
+[INFO] 
+[INFO] --- dependency:2.10:copy-dependencies (stage-dependencies) @ mongodb-binding ---
+[INFO] org.slf4j:slf4j-api:jar:1.7.25 already exists in destination.
+[INFO] ch.qos.logback:logback-core:jar:1.1.2 already exists in destination.
+[INFO] org.xerial.snappy:snappy-java:jar:1.1.7.1 already exists in destination.
+[INFO] org.mongodb:mongo-java-driver:jar:3.11.0 already exists in destination.
+[INFO] ch.qos.logback:logback-classic:jar:1.1.2 already exists in destination.
+[INFO] com.allanbank:mongodb-async-driver:jar:2.0.1 already exists in destination.
+[INFO] 
+[INFO] --- assembly:2.5.5:single (default) @ mongodb-binding ---
+[WARNING] The following patterns were never triggered in this artifact exclusion filter:
+o  '*:sources'
+
+[INFO] Building tar: /Users/skander/poly/architecture/Redis-VS-MongoDB/YCSB/mongodb/target/ycsb-mongodb-binding-0.18.0-SNAPSHOT.tar.gz
+[INFO] 
+[INFO] --- dependency:2.10:list (default-cli) @ mongodb-binding ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for YCSB Root 0.18.0-SNAPSHOT:
+[INFO] 
+[INFO] YCSB Root .......................................... SUCCESS [  0.736 s]
+[INFO] Core YCSB .......................................... SUCCESS [  0.321 s]
+[INFO] Per Datastore Binding descriptor ................... SUCCESS [  0.066 s]
+[INFO] YCSB Datastore Binding Parent ...................... SUCCESS [  0.167 s]
+[INFO] MongoDB Binding .................................... SUCCESS [  0.503 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.994 s
+[INFO] Finished at: 2024-11-24T14:45:36-05:00
+[INFO] ------------------------------------------------------------------------
+mongo client connection created with mongodb://127.0.0.1:27017/
