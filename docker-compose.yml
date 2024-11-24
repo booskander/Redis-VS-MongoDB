@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: local-mongo
+    restart: always
+    networks:
+      - mongo-network
+    ports:
+      - "27017:27017"  
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongo_data:/data/db
+
+networks:
+  mongo-network:
+    external: true
+
+volumes:
+  mongo_data:
