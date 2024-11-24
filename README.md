@@ -34,4 +34,14 @@ mongosh --host localhost --port <desired-port> -u admin -p password
 ### you should now see a mongoDB shell like this:
 <img width="1469" alt="image" src="https://github.com/user-attachments/assets/7bcf9d32-06e8-4016-8637-c0dd8f04ed1d">
 
+# 5. Testing Redis connectivity
+
+```redis-cli -h localhost -p <desired-port>```
+
+### you should now see a redis shell like this:
+
+<img width="754" alt="image" src="https://github.com/user-attachments/assets/f6ce94fe-81aa-4fd8-8178-81fb9f094588">
+
+
+
 
