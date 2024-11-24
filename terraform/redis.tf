@@ -23,10 +23,15 @@ resource "docker_container" "redis_container" {
   }
   ports {
     internal = 6379
-    external = 30278 + count.index
+    external = 6379 + count.index
   }
   volumes {
     volume_name    = docker_volume.redis_volume[count.index].name
     container_path = "/data"
   }
+  env = [
+    "REDIS_PASSWORD=password", # Add any necessary env vars like passwords
+  ]
+  command = ["redis-server", "--requirepass", "password", "--save", "900", "1", "--loglevel", "warning"]
+
 }

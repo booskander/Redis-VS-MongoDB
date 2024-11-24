@@ -1,21 +1,23 @@
 version: '3.9'
+
 services:
   mongodb:
     image: mongo:latest
-    container_name: local-mongo
     restart: always
+    deploy:
+      replicas: 3
     networks:
       - mongo-network
     ports:
-      - "27017:27017"  
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
+      - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    command: ["mongod", "--replSet", "rs0", "--bind_ip_all"]
+
   redis:
     image: redis:latest
-    container_name: local-redis
+    deploy:
+      replicas: 3
     restart: always
     networks:
       - redis-network
@@ -32,3 +34,4 @@ networks:
 
 volumes:
   mongo_data:
+  redis_data:
