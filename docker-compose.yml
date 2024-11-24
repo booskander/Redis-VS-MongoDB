@@ -13,9 +13,21 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
     volumes:
       - mongo_data:/data/db
+  redis:
+    image: redis:latest
+    container_name: local-redis
+    restart: always
+    networks:
+      - redis-network
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
 
 networks:
   mongo-network:
+    external: true
+  redis-network:
     external: true
 
 volumes:

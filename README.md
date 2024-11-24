@@ -17,3 +17,7 @@ run:
 # to change the number of replicas use this command
 
 `terraform apply -var="replicas_count=<desired-count>"`
+
+# to visualize the containers running run this command:
+
+`docker ps`

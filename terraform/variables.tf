@@ -1,4 +1,9 @@
-variable "replicas_count" {
+variable "mongo_replicas_count" {
   default     = 3
-  description = "We put here the number of replicas, will instantiate the right number of containers"
+  description = "number of mongo containers to instantiate"
+}
+
+variable "redis_replicas_count" {
+  default     = 3
+  description = "number of redis containers to instantiate"
 }
