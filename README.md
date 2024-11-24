@@ -47,7 +47,8 @@ mongosh --host localhost --port <desired-port>
 
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/f6ce94fe-81aa-4fd8-8178-81fb9f094588">
 
-# 6. Verify that the replication set works as expected by runningg
+# 6. Verify that the replication set works as expected 
+### for mongo
 ```
 mongosh --host localhost --port <desired-port>
 rs.status()
@@ -55,6 +56,12 @@ rs.status()
 **and you should get the following output...**
 
 <img width="953" alt="image" src="https://github.com/user-attachments/assets/4f3702e3-6470-41ad-a667-3d18ed077821">
+
+### for Redis
+```
+docker exec redis-node-1 redis-cli -a password INFO replication
+```
+<img width="1062" alt="image" src="https://github.com/user-attachments/assets/a63bd1f6-dddb-4181-8df8-744c79adafd7">
 
 
 # For reference:
