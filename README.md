@@ -30,7 +30,7 @@ terraform apply -var="redis_replicas_count=<desired-count>
 # 4. Testing mongoDB connectivity
 
 ```
-mongosh --host localhost --port <desired-port> -u admin -p password
+mongosh --host localhost --port <desired-port>
 ```
 
 ### you should now see a mongoDB shell like this:
@@ -44,6 +44,16 @@ mongosh --host localhost --port <desired-port> -u admin -p password
 ### you should now see a redis shell like this:
 
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/f6ce94fe-81aa-4fd8-8178-81fb9f094588">
+
+# 6. Verify that the replication set works as expected by runningg
+```
+mongosh --host localhost --port <desired-port>
+rs.status()
+```
+**and you should get the following output...**
+
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/4f3702e3-6470-41ad-a667-3d18ed077821">
+
 
 # For reference:
 
