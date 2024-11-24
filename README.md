@@ -1,3 +1,5 @@
+# Prerequisities, install docker and terraform fam, we in 2024...
+
 # 1. Navigate to terraform directory
 
 run:
