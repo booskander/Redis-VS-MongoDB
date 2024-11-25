@@ -6,3 +6,4 @@
 terraform/.terraform.lock.hcl
 terraform/terraform.tfstate.d/local/terraform.tfstate.backup
 terraform/terraform.tfstate.d/local/terraform.tfstate
+**/ycsb-0.17.0/** 

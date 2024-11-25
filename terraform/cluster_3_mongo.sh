@@ -6,7 +6,7 @@ do
 cd ..
 cd ./YCSB
 echo "Loading data into MongoDB on port 27017..."
-./bin/ycsb load mongodb -s -P workloads/workloada -p recordcount=100 -threads 64 -p mongodb.url="mongodb://127.0.0.1:27017/" >> /Users/skander/poly/architecture/Redis-VS-MongoDB/terraform/outputLoad.txt
+./bin/ycsb load mongodb -s -P workloads/workloadf -p recordcount=1000 -threads 32 -p mongodb.url="mongodb://127.0.0.1:27017" >> /Users/skander/poly/architecture/Redis-VS-MongoDB/terraform/outputLoad.txt
 
 if [ $? -eq 0 ]; then
     echo "Data loaded successfully into MongoDB on port 27017"
@@ -16,7 +16,7 @@ else
 fi
 
 echo "Loading data into MongoDB on port 27018..."
-../YCSB/bin/ycsb load mongodb -s -P workloads/workloada -p recordcount=100 -threads 64 -p mongodb.url="mongodb://127.0.0.1:27017/" >> /Users/skander/poly/architecture/Redis-VS-MongoDB/terraform/outputRun.txt
+./bin/ycsb load mongodb -s -P workloads/workloadf -p recordcount=1000 -threads 32 -p mongodb.url="mongodb://127.0.0.1:27017" >> /Users/skander/poly/architecture/Redis-VS-MongoDB/terraform/outputRun.txt
 
 if [ $? -eq 0 ]; then
     echo "Data loaded successfully into MongoDB on port 27017"
